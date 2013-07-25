@@ -252,7 +252,7 @@ void GeneticAlgorithm::calculateNewGenerations(int nGenerations){
 			double * pointerTog2Variable = &_populationParametersOld[ints2[j]].c11;
 			double * pointerTog3Variable = &_populationParametersOld[ints3[j]].c11;	
 				
-			cubicParameters(pointerToOldVariable, pointerToNewVariable, pointerTog1Variable, pointerTog2Variable, pointerTog3Variable);
+			tetragonalParameters(pointerToOldVariable, pointerToNewVariable, pointerTog1Variable, pointerTog2Variable, pointerTog3Variable);
 
 				//could be optimzed for vector arithmetic
 			/*for(int k = 0; k < nVars; k++){

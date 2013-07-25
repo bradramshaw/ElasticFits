@@ -79,36 +79,36 @@ void GeneticAlgorithm::initializeParameters(double* dataSet, int dataSetLength, 
 
 		_populationParametersOld[i].chiSq = calculateResidual(&_populationParametersOld[i],0);/// ***Tetragonal PuCoGa5*/
 			
-		//_populationParametersOld[i].c11 = (randomDouble(250,300))*pow(10,9);
-		//_populationParametersOld[i].c22 = _populationParametersOld[i].c11;
-		//
-		//_populationParametersOld[i].c33 = (randomDouble(275,325))*pow(10,9);
-
-		//_populationParametersOld[i].c44 = (randomDouble(75,125))*pow(10,9);
-		//_populationParametersOld[i].c55 = _populationParametersOld[i].c44;
-		//
-		//_populationParametersOld[i].c66 = (randomDouble(120,160))*pow(10,9);
-
-		//_populationParametersOld[i].c12 = (randomDouble(110,180))*pow(10,9);
-	
-		//_populationParametersOld[i].c13 = (randomDouble(75,130))*pow(10,9);
-		//_populationParametersOld[i].c23 = _populationParametersOld[i].c13; 
-
-		//_populationParametersOld[i].chiSq = calculateResidual(&_populationParametersOld[i],0);/// ***Tetragonal URu2Si2
-
-		_populationParametersOld[i].c11 = (randomDouble(1,400))*pow(10,9);
+		_populationParametersOld[i].c11 = (randomDouble(260,350))*pow(10,9);
 		_populationParametersOld[i].c22 = _populationParametersOld[i].c11;
-		_populationParametersOld[i].c33 = _populationParametersOld[i].c11;
 		
-		_populationParametersOld[i].c44 = (randomDouble(1,400))*pow(10,9);
-		_populationParametersOld[i].c55 = _populationParametersOld[i].c44;		
-		_populationParametersOld[i].c66 = _populationParametersOld[i].c44;
+		_populationParametersOld[i].c33 = (randomDouble(280,325))*pow(10,9);
 
-		_populationParametersOld[i].c12 = (randomDouble(1,400))*pow(10,9);	
-		_populationParametersOld[i].c13 = _populationParametersOld[i].c12; 
-		_populationParametersOld[i].c23 = _populationParametersOld[i].c12; 
+		_populationParametersOld[i].c44 = (randomDouble(75,120))*pow(10,9);
+		_populationParametersOld[i].c55 = _populationParametersOld[i].c44;
+		
+		_populationParametersOld[i].c66 = (randomDouble(120,160))*pow(10,9);
 
-		_populationParametersOld[i].chiSq = calculateResidual(&_populationParametersOld[i],0);/// ***Cubic Nb
+		_populationParametersOld[i].c12 = (randomDouble(130,180))*pow(10,9);
+	
+		_populationParametersOld[i].c13 = (randomDouble(85,120))*pow(10,9);
+		_populationParametersOld[i].c23 = _populationParametersOld[i].c13; 
+
+		_populationParametersOld[i].chiSq = calculateResidual(&_populationParametersOld[i],0);/// ***Tetragonal URu2Si2
+
+		//_populationParametersOld[i].c11 = (randomDouble(1,400))*pow(10,9);
+		//_populationParametersOld[i].c22 = _populationParametersOld[i].c11;
+		//_populationParametersOld[i].c33 = _populationParametersOld[i].c11;
+		//
+		//_populationParametersOld[i].c44 = (randomDouble(1,400))*pow(10,9);
+		//_populationParametersOld[i].c55 = _populationParametersOld[i].c44;		
+		//_populationParametersOld[i].c66 = _populationParametersOld[i].c44;
+
+		//_populationParametersOld[i].c12 = (randomDouble(1,400))*pow(10,9);	
+		//_populationParametersOld[i].c13 = _populationParametersOld[i].c12; 
+		//_populationParametersOld[i].c23 = _populationParametersOld[i].c12; 
+
+		//_populationParametersOld[i].chiSq = calculateResidual(&_populationParametersOld[i],0);/// ***Cubic Nb
 
 		//_populationParametersOld[i].c11 = (randomDouble(120,200))*pow(10,9);
 		//_populationParametersOld[i].c22 = _populationParametersOld[i].c11;
