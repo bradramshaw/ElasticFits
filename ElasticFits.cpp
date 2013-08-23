@@ -12,11 +12,17 @@ using namespace std;
 //static const double yHL = 0.00212/2; // HALF length in the y direction
 //static const double zHL = 0.00025/2; // HALF length in the z direction. CeCoIn5****
 
-static const double density = 10079; // density of the material in grams/meter^3. All units are SI
+//static const double density = 10079; // density of the material in grams/meter^3. All units are SI
+//
+//static const double xHL = 0.00307/2; // HALF length in the x direction, in meters.
+//static const double yHL = 0.00278/2; // HALF length in the y direction
+//static const double zHL = 0.00258/2; // HALF length in the z direction. URu2Si2****
 
-static const double xHL = 0.00307/2; // HALF length in the x direction, in meters.
-static const double yHL = 0.00278/2; // HALF length in the y direction
-static const double zHL = 0.00258/2; // HALF length in the z direction. URu2Si2****
+static const double density = 6302; // density of the material in grams/meter^3. All units are SI
+
+static const double xHL = 0.000856/2; // HALF length in the x direction, in meters.
+static const double yHL = 0.001054/2; // HALF length in the y direction
+static const double zHL = 0.00018/2; // HALF length in the z direction. YBCO67****
 
 //static const double density = 8174; // density of the material in grams/meter^3. All units are SI
 //
@@ -50,7 +56,7 @@ int _tmain(int argc, _TCHAR* argv[]) //main function
 	    GetLocalTime(&t);
 	    vslNewStream( & stream, VSL_BRNG_SFMT19937, t.wMilliseconds );
 	   
-		DataExtractor extractor("../ElasticFits/URu2Si2_LowT.dat");
+		DataExtractor extractor("../ElasticFits/YBCO.dat");
 		double * data = extractor.getDataArray();
 		int nPoints = extractor.getNumberOfLines();
 		int order, nMissing; // will store the max order of the polynomials to use
@@ -72,7 +78,7 @@ int _tmain(int argc, _TCHAR* argv[]) //main function
 		cin >> nMissing;
 		cout << endl;
 
-		GeneticAlgorithm geneticAlgorithm(data, nPoints,  100, scale, cross, order, xHL, yHL, zHL, density, nMissing);
+		GeneticAlgorithm geneticAlgorithm(data, nPoints,  200, scale, cross, order, xHL, yHL, zHL, density, nMissing);
 	
 		geneticAlgorithm.calculateMinimum();
 		geneticAlgorithm.printMinimumParameters();	
