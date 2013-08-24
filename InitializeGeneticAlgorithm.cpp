@@ -97,20 +97,20 @@ void GeneticAlgorithm::initializeParameters(double* dataSet, int dataSetLength, 
 		_populationParametersOld[i].chiSq = calculateResidual(&_populationParametersOld[i],0);/// ***Tetragonal URu2Si2
 */
 
-		_populationParametersOld[i].c11 = (randomDouble(220,270))*pow(10,9);
-		_populationParametersOld[i].c22 = (randomDouble(220,270))*pow(10,9);
+		_populationParametersOld[i].c11 = (randomDouble(220,260))*pow(10,9);
+		_populationParametersOld[i].c22 = (randomDouble(210,250))*pow(10,9);
 		
-		_populationParametersOld[i].c33 = (randomDouble(120,250))*pow(10,9);
+		_populationParametersOld[i].c33 = (randomDouble(100,150))*pow(10,9);
 
-		_populationParametersOld[i].c44 = (randomDouble(20,65))*pow(10,9);
-		_populationParametersOld[i].c55 = (randomDouble(40,70))*pow(10,9);
+		_populationParametersOld[i].c44 = (randomDouble(32,38))*pow(10,9);
+		_populationParametersOld[i].c55 = (randomDouble(48,52))*pow(10,9);
 		
-		_populationParametersOld[i].c66 = (randomDouble(90,105))*pow(10,9);
+		_populationParametersOld[i].c66 = (randomDouble(94,98))*pow(10,9);
 
 		_populationParametersOld[i].c12 = (randomDouble(100,150))*pow(10,9);
 	
-		_populationParametersOld[i].c13 = (randomDouble(30,100))*pow(10,9);
-		_populationParametersOld[i].c23 = (randomDouble(60,100))*pow(10,9);
+		_populationParametersOld[i].c13 = (randomDouble(25,60))*pow(10,9);
+		_populationParametersOld[i].c23 = (randomDouble(20,70))*pow(10,9);
 
 		_populationParametersOld[i].chiSq = calculateResidual(&_populationParametersOld[i],0);/// ***Orthorhombic YBCO67
 
